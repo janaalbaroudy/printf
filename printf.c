@@ -6,19 +6,16 @@
  * @ap: list
  * Return: number of characters printed
  */
-
 void format_checker(char c, va_list ap)
 {
 	if (c == 'c')
 	{
 		char ch = va_arg(ap, int);
-
 		write(1, &ch, 1);
 	}
 	else if (c == 's')
 	{
 		char *str = va_arg(ap, char*);
-
 		str_print(str);
 	}
 	else if (c == '%')
@@ -28,13 +25,11 @@ void format_checker(char c, va_list ap)
 	else if (c == 'd' || c == 'i')
 	{
 		int num = va_arg(ap, int);
-
 		d_i(num);
 	}
 	else if (c == 'b')
 	{
 		int num = va_arg(ap, int);
-
 		b_print(num);
 	}
 }
@@ -44,7 +39,6 @@ void format_checker(char c, va_list ap)
  * @format: format string
  * Return: number of characters printed
  */
-
 int _printf(const char *format, ...)
 {
 	int i = 0;

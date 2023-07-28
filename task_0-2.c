@@ -24,7 +24,6 @@ void d_i(int d)
 	if (d < 0)
 	{
 		d = -d;
-		n++;
 		negative++;
 	}
 	n++;
@@ -34,7 +33,6 @@ void d_i(int d)
 	n--;
 	s[n] = '\0';
 	n--;
-
 	while (d != 0)
 	{
 		digit_num = d % 10;
@@ -96,7 +94,7 @@ void b_print(int x)
  * Return: void
  */
 
-void str_print(char *s)
+void str_print(const char *s)
 {
 	int m = 0;
 
